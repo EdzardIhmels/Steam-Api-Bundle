@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: composer install
-        run: npm -v
+        run: |
+          php composer-setup.php --install-dir=bin --filename=composer
+          composer install
         
      
   
