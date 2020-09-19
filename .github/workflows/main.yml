@@ -11,8 +11,10 @@ jobs:
         run: composer install --no-ansi --no-interaction --no-suggest --no-progress --prefer-dist --ignore-platform-reqs
       - name: Execute tests (Unit) via PHPUnit
         run: vendor/bin/phpunit.phar
-      - name: Execute Codesniffer
+      - name: Execute Codesniffer src/
         run: php ./vendor/bin/phpcs.phar --standard=./ruleset.xml  ./src/*/
+      - name: Execute Codesniffer test/
+        run: php ./vendor/bin/phpcs.phar --standard=./ruleset.xml  ./test/*/
         
      
   
