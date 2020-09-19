@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: composer install
-        run: composer install
+        run: npm -v
         
      
   
