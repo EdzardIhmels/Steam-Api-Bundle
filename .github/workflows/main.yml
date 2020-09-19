@@ -8,7 +8,8 @@ jobs:
     steps:
       - name: composer install
         run: |
-          php composer-setup.php --install-dir=bin --filename=composer
+          sudo curl -s https://getcomposer.org/installer
+          sudo mv composer.phar /usr/local/bin/composer
           composer install
         
      
