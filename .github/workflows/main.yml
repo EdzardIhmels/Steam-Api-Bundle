@@ -1,0 +1,13 @@
+name: run CodeStyle
+
+on: [push]
+
+jobs:
+  run-phpunit-tests:
+    runs-on: ubuntu-lates
+    steps:
+      - name: composer install
+        run: composer install
+        
+     
+  
