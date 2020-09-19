@@ -12,6 +12,7 @@ jobs:
           sudo mv composer.phar /usr/local/bin/composer
           ls -la
           composer install
+        shell: composer
         
      
   
