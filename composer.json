@@ -21,6 +21,10 @@
         "tools": {
             "phpunit": {
                 "url": "https://phar.phpunit.de/phpunit-8.phar"
+            },
+            "phpcs": {
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.6/phpcs.phar",
+                "sign-url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.6/phpcs.phar.asc"
             }
         }
     }
