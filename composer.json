@@ -9,5 +9,19 @@
             "email": "edzard-ihmels@web.de"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.4",
+        "tm/tooly-composer-script": "^1.4"
+    },
+    "scripts": {
+        "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
+        "post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
+    },
+    "extra": {
+        "tools": {
+            "phpunit": {
+                "url": "https://phar.phpunit.de/phpunit-8.phar"
+            }
+        }
+    }
 }
