@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview;
 
@@ -25,5 +25,4 @@ class RawJsonItemPriceOverviewApplication
 
         return new JsonResponse(json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR));
     }
-
 }

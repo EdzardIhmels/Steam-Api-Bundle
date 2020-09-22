@@ -1,12 +1,12 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview\Client;
 
 class CsClient extends SteamClient
 {
-    const CS_API_IDENTIFIER = '730';
+    public const CS_API_IDENTIFIER = '730';
 
     public function __construct(string $steamURL)
     {

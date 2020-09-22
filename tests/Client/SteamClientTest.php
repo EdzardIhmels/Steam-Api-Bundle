@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Client;
 
@@ -16,5 +16,4 @@ final class SteamClientTest extends TestCase
 
         $this->assertEquals(sprintf('test/?appid=%s', CsClient::CS_API_IDENTIFIER), $client->getApplicationURL());
     }
-
 }
