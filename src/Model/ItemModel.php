@@ -24,6 +24,6 @@ class ItemModel implements ItemModelInterface
 
     public function getMedianPrice(): Money
     {
-        return $this->getMedianPrice;
+        return $this->medianPrice;
     }
 }
