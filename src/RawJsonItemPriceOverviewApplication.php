@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview;
 
-use EdzardIhmels\PriceOverView\Client\SteamClient;
+use EdzardIhmels\PriceOverview\Client\SteamClient;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class RawJsonItemPriceOverviewApplication
