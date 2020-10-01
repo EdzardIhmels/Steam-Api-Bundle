@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace Client;
 
@@ -15,5 +15,15 @@ final class SteamClientTest extends TestCase
         $client = new SteamClient('test/', CsClient::CS_API_IDENTIFIER);
 
         $this->assertEquals(sprintf('test/?appid=%s', CsClient::CS_API_IDENTIFIER), $client->getApplicationURL());
+    }
+
+    public function testApplicationUrlWithItemName(): void
+    {
+        $client = new SteamClient('test/', CsClient::CS_API_IDENTIFIER);
+
+        $this->assertEquals(
+            sprintf('test/?appid=%s&market_hash_name=testItem', CsClient::CS_API_IDENTIFIER),
+            $client->getApplicationURLwithItemName('testItem')
+        );
     }
 }
