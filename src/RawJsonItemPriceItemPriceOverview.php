@@ -1,22 +1,13 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace EdzardIhmels\PriceOverview;
 
-use EdzardIhmels\PriceOverview\Client\SteamClient;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class RawJsonItemPriceOverviewApplication
+class RawJsonItemPriceItemPriceOverview extends AbstractItemPriceOverview
 {
-    private SteamClient $steamClient;
-
-    public function __construct(
-        SteamClient $steamClient
-    ) {
-        $this->steamClient = $steamClient;
-    }
-
     public function execute(string $itemName): JsonResponse
     {
         $response = $this->steamClient->itemRequest($itemName);
