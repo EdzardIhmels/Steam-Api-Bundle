@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview\Model;
 
-use Brick\Money\Money;
+use Money\Money;
 
 class ItemModel implements ItemModelInterface
 {

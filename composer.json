@@ -12,10 +12,11 @@
     "require": {
         "php": "^7.4",
         "tm/tooly-composer-script": "^1.4",
-        "brick/money": "^0.5.0",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
-        "ext-json": "*"
+        "ext-json": "*",
+        "moneyphp/money": "^3.3",
+        "ext-intl": "*"
     },
     "scripts": {
         "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
