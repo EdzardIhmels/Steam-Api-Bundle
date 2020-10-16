@@ -1,5 +1,5 @@
 {
-    "name": "edzardihmels/steam-api-connector",
+    "name": "EdzardIhmels/steam-api-connector",
     "description": "deliver some applications to work with the steam api",
     "type": "library",
     "license": "MIT",
@@ -12,10 +12,11 @@
     "require": {
         "php": "^7.4",
         "tm/tooly-composer-script": "^1.4",
-        "brick/money": "^0.5.0",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
-        "ext-json": "*"
+        "ext-json": "*",
+        "moneyphp/money": "^3.3",
+        "ext-intl": "*"
     },
     "scripts": {
         "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
@@ -24,6 +25,11 @@
     "autoload": {
         "psr-4": {
             "EdzardIhmels\\PriceOverview\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EdzardIhmels\\PriceOverview\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -45,6 +51,7 @@
         }
     },
     "require-dev": {
-        "slevomat/coding-standard": "^6.4"
+        "slevomat/coding-standard": "^6.4",
+        "mockery/mockery": "^1.4"
     }
 }
