@@ -1,12 +1,12 @@
 <?php
 
 use EdzardIhmels\PriceOverview\Client\CsClient;
-use EdzardIhmels\PriceOverview\RawJsonItemPriceItemPriceOverview;
+use EdzardIhmels\PriceOverview\RawJsonItemPriceOverview;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 $client = new CsClient('https://steamcommunity.com/market/priceoverview/');
 
-$application = new RawJsonItemPriceItemPriceOverview($client);
+$application = new RawJsonItemPriceOverview($client);
 
 var_dump($application->execute('Fracture Case')->getContent());

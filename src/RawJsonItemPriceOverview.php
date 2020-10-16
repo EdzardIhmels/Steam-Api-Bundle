@@ -4,9 +4,10 @@ declare(strict_types = 1);
 
 namespace EdzardIhmels\PriceOverview;
 
+
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class RawJsonItemPriceItemPriceOverview extends AbstractItemPriceOverview
+final class RawJsonItemPriceOverview extends AbstractItemPriceOverview
 {
     public function execute(string $itemName): JsonResponse
     {
@@ -14,6 +15,6 @@ class RawJsonItemPriceItemPriceOverview extends AbstractItemPriceOverview
 
         $response->getBody()->rewind();
 
-        return new JsonResponse(json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR));
+        return  JsonResponse::fromJsonString($response->getBody()->getContents(), $response->getStatusCode());
     }
 }

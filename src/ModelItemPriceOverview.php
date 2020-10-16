@@ -9,9 +9,9 @@ use Money\Currencies\ISOCurrencies;
 use Money\Parser\IntlMoneyParser;
 use NumberFormatter;
 
-class ModelItemPriceOverview extends AbstractItemPriceOverview
+final class ModelItemPriceOverview extends AbstractItemPriceOverview
 {
-    public function execute(string $itemName)
+    public function execute(string $itemName): ItemModel
     {
         $response = $this->steamClient->itemRequest($itemName);
 

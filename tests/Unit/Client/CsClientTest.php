@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Client;
+namespace EdzardIhmels\PriceOverview\Tests\Unit\Client;
 
 use EdzardIhmels\PriceOverview\Client\CsClient;
 use PHPUnit\Framework\TestCase;
@@ -13,6 +13,6 @@ final class CsClientTest extends TestCase
     {
         $client = new CsClient('test');
 
-        $this->assertEquals(CsClient::CS_API_IDENTIFIER, $client->getAppIdentifier());
+        self::assertEquals(CsClient::CS_API_IDENTIFIER, $client->getAppIdentifier());
     }
 }

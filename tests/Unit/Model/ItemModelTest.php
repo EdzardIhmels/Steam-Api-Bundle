@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Model;
+namespace EdzardIhmels\PriceOverview\Tests\Unit\Model;
 
 use EdzardIhmels\PriceOverview\Model\ItemModel;
 use Money\Money;
@@ -24,21 +24,21 @@ final class ItemModelTest extends TestCase
 
     public function testGetLowestPrice(): void
     {
-        $this->assertEquals(100, $this->item->getLowestPrice()->getAmount());
+        self::assertEquals(100, $this->item->getLowestPrice()->getAmount());
     }
 
     public function testGetMedianPrice(): void
     {
-        $this->assertEquals(101, $this->item->getMedianPrice()->getAmount());
+        self::assertEquals(101, $this->item->getMedianPrice()->getAmount());
     }
 
     public function testGetVolume(): void
     {
-        $this->assertEquals(2000, $this->item->getVolume());
+        self::assertEquals(2000, $this->item->getVolume());
     }
 
     public function testGetName():void
     {
-        $this->assertEquals('testItem', $this->item->getName());
+        self::assertEquals('testItem', $this->item->getName());
     }
 }

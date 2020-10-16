@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Client;
+namespace EdzardIhmels\PriceOverview\Tests\Unit\Client;
 
 use EdzardIhmels\PriceOverview\Client\CsClient;
 use EdzardIhmels\PriceOverview\Client\SteamClient;
@@ -14,14 +14,14 @@ final class SteamClientTest extends TestCase
     {
         $client = new SteamClient('test/', CsClient::CS_API_IDENTIFIER);
 
-        $this->assertEquals(sprintf('test/?appid=%s', CsClient::CS_API_IDENTIFIER), $client->getApplicationURL());
+        self::assertEquals(sprintf('test/?appid=%s', CsClient::CS_API_IDENTIFIER), $client->getApplicationURL());
     }
 
     public function testApplicationUrlWithItemName(): void
     {
         $client = new SteamClient('test/', CsClient::CS_API_IDENTIFIER);
 
-        $this->assertEquals(
+        self::assertEquals(
             sprintf('test/?appid=%s&market_hash_name=testItem', CsClient::CS_API_IDENTIFIER),
             $client->getApplicationURLwithItemName('testItem')
         );

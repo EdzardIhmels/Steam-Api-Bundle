@@ -6,7 +6,7 @@ namespace EdzardIhmels\PriceOverview;
 
 use stdClass;
 
-class StdObjectItemPriceOverview extends AbstractItemPriceOverview
+final class StdObjectItemPriceOverview extends AbstractItemPriceOverview
 {
     public function execute(string $itemName): stdClass
     {

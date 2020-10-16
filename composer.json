@@ -1,5 +1,5 @@
 {
-    "name": "steamConne/steam-api-connector",
+    "name": "EdzardIhmels/steam-api-connector",
     "description": "deliver some applications to work with the steam api",
     "type": "library",
     "license": "MIT",
@@ -27,6 +27,11 @@
             "EdzardIhmels\\PriceOverview\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "EdzardIhmels\\PriceOverview\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "tools": {
             "phpunit": {
@@ -46,6 +51,7 @@
         }
     },
     "require-dev": {
-        "slevomat/coding-standard": "^6.4"
+        "slevomat/coding-standard": "^6.4",
+        "mockery/mockery": "^1.4"
     }
 }
