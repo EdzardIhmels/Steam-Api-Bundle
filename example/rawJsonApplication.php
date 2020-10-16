@@ -9,4 +9,4 @@ $client = new CsClient('https://steamcommunity.com/market/priceoverview/');
 
 $application = new RawJsonItemPriceItemPriceOverview($client);
 
-var_dump($application->execute('Fracture%20Case')->getContent());
+var_dump($application->execute('Fracture Case')->getContent());

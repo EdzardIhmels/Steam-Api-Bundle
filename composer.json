@@ -1,5 +1,5 @@
 {
-    "name": "edzardihmels/steam-api-connector",
+    "name": "steamConne/steam-api-connector",
     "description": "deliver some applications to work with the steam api",
     "type": "library",
     "license": "MIT",

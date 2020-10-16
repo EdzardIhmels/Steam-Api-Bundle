@@ -11,4 +11,8 @@ interface ItemModelInterface
     public function getLowestPrice(): Money;
 
     public function getMedianPrice(): Money;
+
+    public function getVolume(): int;
+
+    public function getName(): string;
 }

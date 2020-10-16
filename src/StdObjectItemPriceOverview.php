@@ -14,14 +14,17 @@ class StdObjectItemPriceOverview extends AbstractItemPriceOverview
 
         $response->getBody()->rewind();
 
-        $result =  (object)json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+        $result =  (object)json_decode(
+            $response->getBody()->getContents(),
+            true, 512,
+            JSON_THROW_ON_ERROR
+        );
 
-        $pattern = '/\$/';
+        $result->lowest_price = str_replace('$','',$result->lowest_price);
+        $result->median_price = str_replace('$','', $result->median_price);
+        $result->volume = (int)str_replace(',','', $result->volume);
 
-        $result->lowest_price = preg_filter($pattern,'', $result->lowest_price);
-        $result->median_price = preg_filter($pattern,'', $result->median_price);
-
-        $result->currency = 'en_US';
+        $result->currency = 'USD';
 
         return $result;
     }
