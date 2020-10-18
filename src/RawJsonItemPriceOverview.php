@@ -1,9 +1,8 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview;
-
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 
