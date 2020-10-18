@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview\Tests\Unit\Model;
 
@@ -37,7 +37,7 @@ final class ItemModelTest extends TestCase
         self::assertEquals(2000, $this->item->getVolume());
     }
 
-    public function testGetName():void
+    public function testGetName(): void
     {
         self::assertEquals('testItem', $this->item->getName());
     }
