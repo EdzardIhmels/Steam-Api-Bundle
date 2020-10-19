@@ -6,7 +6,7 @@ namespace EdzardIhmels\PriceOverview\Model;
 
 use Money\Money;
 
-class ItemModel implements ItemModelInterface
+class Item
 {
     private Money $lowestPrice;
     private Money $medianPrice;
