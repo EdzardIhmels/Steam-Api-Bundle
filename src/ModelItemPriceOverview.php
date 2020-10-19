@@ -4,14 +4,22 @@ declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview;
 
-use EdzardIhmels\PriceOverview\Model\ItemModel;
+use EdzardIhmels\PriceOverview\Client\SteamClient;
+use EdzardIhmels\PriceOverview\Model\Item;
 use Money\Currencies\ISOCurrencies;
 use Money\Parser\IntlMoneyParser;
 use NumberFormatter;
 
-final class ModelItemPriceOverview extends AbstractItemPriceOverview
+final class ModelItemPriceOverview implements ApplicationInterface
 {
-    public function execute(string $itemName): ItemModel
+    private SteamClient $steamClient;
+
+    public function __construct(SteamClient $steamClient)
+    {
+        $this->steamClient = $steamClient;
+    }
+
+    public function execute(string $itemName): Item
     {
         $response = $this->steamClient->itemRequest($itemName);
 
@@ -24,7 +32,7 @@ final class ModelItemPriceOverview extends AbstractItemPriceOverview
         $response = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
         $response['volume'] = (int)str_replace(',', '', $response['volume']);
 
-        return new ItemModel(
+        return new Item(
             $moneyParser->parse($response['lowest_price']),
             $moneyParser->parse($response['median_price']),
             $response['volume'],
