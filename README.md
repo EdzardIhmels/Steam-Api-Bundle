@@ -5,11 +5,11 @@ returns an Item Object based on the ItempriceOverview of Steam
 
  * PHP 7.4
 
-##Install and Usage
+## Install and Usage
 
 take a look in 'example' to the an example
 
-##Codequality Tools
+## Codequality Tools
  
 ### run *phpUnit*
  
