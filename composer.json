@@ -1,5 +1,5 @@
 {
-    "name": "EdzardIhmels/steam-price-overview",
+    "name": "eihmels/steam-price-overview",
     "description": "deliver some applications to work with the steam api",
     "type": "library",
     "license": "MIT",

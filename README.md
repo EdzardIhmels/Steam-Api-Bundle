@@ -1,4 +1,4 @@
-# Steam-Api-Bundle
+# steam-price-overview
 returns an Item Object based on the ItempriceOverview of Steam
 
 ## Requirements:
