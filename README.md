@@ -6,6 +6,8 @@ returns an Item Object based on the ItempriceOverview of Steam
  * PHP 7.4
 
 ## Install and Usage
+ 
+ composer require eihmels/steam-price-overview
 
 take a look in 'example' to the an example
 
