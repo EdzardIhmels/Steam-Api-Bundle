@@ -11,7 +11,6 @@
     ],
     "require": {
         "php": "^7.4",
-        "tm/tooly-composer-script": "^1.4",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
         "ext-json": "*",
@@ -52,6 +51,7 @@
     },
     "require-dev": {
         "slevomat/coding-standard": "^6.4",
-        "mockery/mockery": "^1.4"
+        "mockery/mockery": "^1.4",
+        "tm/tooly-composer-script": "^1.4"
     }
 }
