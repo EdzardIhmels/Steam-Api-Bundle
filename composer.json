@@ -13,13 +13,20 @@
         "php": "^7.4",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
-        "ext-json": "*",
         "moneyphp/money": "^3.3",
-        "ext-intl": "*"
+        "tm/tooly-composer-script": "^1.4"
+    },
+    "require-dev": {
+        "slevomat/coding-standard": "^6.4",
+        "mockery/mockery": "^1.4"
     },
     "scripts": {
-        "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
-        "post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
+        "post-install-cmd":
+           "Tooly\\ScriptHandler::installPharTools"
+        ,
+        "post-update-cmd":
+            "Tooly\\ScriptHandler::installPharTools"
+
     },
     "autoload": {
         "psr-4": {
@@ -48,10 +55,5 @@
                 "force-replace": true
             }
         }
-    },
-    "require-dev": {
-        "slevomat/coding-standard": "^6.4",
-        "mockery/mockery": "^1.4",
-        "tm/tooly-composer-script": "^1.4"
     }
 }
