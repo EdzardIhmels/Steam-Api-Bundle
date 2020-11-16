@@ -45,13 +45,13 @@
                 "force-replace": true
             },
             "phpcs": {
-                "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.6/phpcs.phar",
-                "sign-url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.6/phpcs.phar.asc",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar",
+                "sign-url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar.asc",
                 "force-replace": true
             },
             "phpstan": {
-                "url": "https://github.com/phpstan/phpstan/releases/download/0.12.43/phpstan.phar",
-                "sign-url": "https://github.com/phpstan/phpstan/releases/download/0.12.43/phpstan.phar.asc",
+                "url": "https://github.com/phpstan/phpstan/releases/download/0.12.55/phpstan.phar",
+                "sign-url": "https://github.com/phpstan/phpstan/releases/download/0.12.55/phpstan.phar.asc",
                 "force-replace": true
             }
         }
