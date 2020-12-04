@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace EdzardIhmels\PriceOverview;
 
@@ -24,8 +24,7 @@ final class ModelItemPriceOverview implements ApplicationInterface
     {
         try {
             $response = $this->steamClient->itemRequest($itemName);
-        } catch (Throwable $trowable)
-        {
+        } catch (Throwable $trowable) {
             return null;
         }
 
