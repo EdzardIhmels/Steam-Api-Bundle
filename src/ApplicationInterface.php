@@ -8,5 +8,5 @@ use EdzardIhmels\PriceOverview\Model\Item;
 
 interface ApplicationInterface
 {
-    public function execute(string $itemName): Item;
+    public function execute(string $itemName): ?Item;
 }

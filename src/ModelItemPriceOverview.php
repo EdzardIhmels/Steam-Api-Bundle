@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace EdzardIhmels\PriceOverview;
 
@@ -9,6 +9,7 @@ use EdzardIhmels\PriceOverview\Model\Item;
 use Money\Currencies\ISOCurrencies;
 use Money\Parser\IntlMoneyParser;
 use NumberFormatter;
+use Throwable;
 
 final class ModelItemPriceOverview implements ApplicationInterface
 {
@@ -19,9 +20,15 @@ final class ModelItemPriceOverview implements ApplicationInterface
         $this->steamClient = $steamClient;
     }
 
-    public function execute(string $itemName): Item
+    public function execute(string $itemName): ?Item
     {
-        $response = $this->steamClient->itemRequest($itemName);
+        try {
+            $response = $this->steamClient->itemRequest($itemName);
+        } catch (Throwable $trowable)
+        {
+            return null;
+        }
+
 
         $response->getBody()->rewind();
 
@@ -30,6 +37,10 @@ final class ModelItemPriceOverview implements ApplicationInterface
         $moneyParser = new IntlMoneyParser($numberFormatter, $currencies);
 
         $response = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+
+        if (false === $response['success']) {
+            return null;
+        }
         $response['volume'] = (int)str_replace(',', '', $response['volume']);
 
         return new Item(
