@@ -28,7 +28,6 @@ final class ModelItemPriceOverview implements ApplicationInterface
             return null;
         }
 
-
         $response->getBody()->rewind();
 
         $currencies = new ISOCurrencies();
