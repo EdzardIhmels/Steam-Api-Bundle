@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Tests\Unit;
+namespace PriceOverviewTests\Unit;
 
-use EdzardIhmels\PriceOverview\Client\SteamClient;
-use EdzardIhmels\PriceOverview\Tests\Factory\ResponseFactory;
+use PriceOverview\Client\SteamClient;
+use PriceOverviewTests\Factory\ResponseFactory;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 

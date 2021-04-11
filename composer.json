@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || 8.0",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
         "moneyphp/money": "^3.3",
@@ -30,19 +30,19 @@
     },
     "autoload": {
         "psr-4": {
-            "EdzardIhmels\\PriceOverview\\": "src/"
+            "PriceOverview\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "EdzardIhmels\\PriceOverview\\Tests\\": "tests/"
+            "PriceOverviewTests\\": "tests/"
         }
     },
     "extra": {
         "tools": {
             "phpunit": {
-                "url": "https://phar.phpunit.de/phpunit-8.phar",
-                "force-replace": true
+                "url": "https://phar.phpunit.de/phpunit-8.2.0.phar",
+                "sign-url": "https://phar.phpunit.de/phpunit-8.2.0.phar.asc"
             },
             "phpcs": {
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar",

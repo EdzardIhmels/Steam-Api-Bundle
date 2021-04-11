@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview;
+namespace PriceOverview;
 
-use EdzardIhmels\PriceOverview\Client\SteamClient;
-use EdzardIhmels\PriceOverview\Model\Item;
+use PriceOverview\ApplicationInterface;
+use PriceOverview\Client\SteamClient;
+use PriceOverview\Model\Item;
 use Money\Currencies\ISOCurrencies;
 use Money\Parser\IntlMoneyParser;
 use NumberFormatter;

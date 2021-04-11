@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Tests\Unit\Client;
+namespace Unit\Client;
 
-use EdzardIhmels\PriceOverview\Client\CsClient;
-use EdzardIhmels\PriceOverview\Client\SteamClient;
+use PriceOverview\Client\CsClient;
+use PriceOverview\Client\SteamClient;
 use PHPUnit\Framework\TestCase;
 
 final class SteamClientTest extends TestCase

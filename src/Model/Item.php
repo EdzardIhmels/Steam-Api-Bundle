@@ -2,23 +2,14 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Model;
+namespace PriceOverview\Model;
 
 use Money\Money;
 
 class Item
 {
-    private Money $lowestPrice;
-    private Money $medianPrice;
-    private int $volume;
-    private string $name;
-
-    public function __construct(Money $lowestPrice, Money $medianPrice, int $volume, string $name)
+    public function __construct(private Money $lowestPrice, private Money $medianPrice, private int $volume, private string $name)
     {
-        $this->lowestPrice = $lowestPrice;
-        $this->medianPrice = $medianPrice;
-        $this->volume = $volume;
-        $this->name = $name;
     }
 
     public function getLowestPrice(): Money

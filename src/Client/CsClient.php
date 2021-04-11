@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Client;
+namespace PriceOverview\Client;
 
 class CsClient extends SteamClient
 {

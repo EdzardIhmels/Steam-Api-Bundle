@@ -2,22 +2,16 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Client;
+namespace PriceOverview\Client;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
 
 class SteamClient extends Client
 {
-    private string $steamURL;
-    private string $appIdentifier;
-
-    public function __construct(string $steamURL, string $appIdentifier)
+    public function __construct(private string $steamURL, private string $appIdentifier)
     {
         parent::__construct([]);
-
-        $this->steamURL = $steamURL;
-        $this->appIdentifier = $appIdentifier;
     }
 
     public function itemRequest(string $itemname): ResponseInterface

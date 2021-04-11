@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Tests\Unit\Client;
+namespace PriceOverviewTests\Unit\Client;
 
-use EdzardIhmels\PriceOverview\Client\CsClient;
+
 use PHPUnit\Framework\TestCase;
+use PriceOverview\Client\CsClient;
 
 final class CsClientTest extends TestCase
 {

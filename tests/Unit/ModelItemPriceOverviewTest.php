@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Tests\Unit;
+namespace PriceOverviewTests\Unit;
 
-use EdzardIhmels\PriceOverview\ModelItemPriceOverview;
+use PriceOverview\ModelItemPriceOverview;
 
 final class ModelItemPriceOverviewTest extends ApplicationTest
 {

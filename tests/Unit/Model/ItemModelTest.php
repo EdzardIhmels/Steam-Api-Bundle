@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Tests\Unit\Model;
+namespace PriceOverview\Tests\Unit\Model;
 
-use EdzardIhmels\PriceOverview\Model\Item;
+use PriceOverview\Model\Item;
 use Money\Money;
 use PHPUnit\Framework\TestCase;
 

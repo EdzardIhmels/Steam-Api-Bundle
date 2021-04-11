@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview\Tests\Factory;
+namespace PriceOverviewTests\Factory;
 
 use GuzzleHttp\Psr7\Response;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;

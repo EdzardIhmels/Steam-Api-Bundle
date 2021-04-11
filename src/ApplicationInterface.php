@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace EdzardIhmels\PriceOverview;
+namespace PriceOverview;
 
-use EdzardIhmels\PriceOverview\Model\Item;
+use PriceOverview\Model\Item;
 
 interface ApplicationInterface
 {
