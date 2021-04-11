@@ -23,7 +23,7 @@ final class SteamClientTest extends TestCase
 
         self::assertEquals(
             sprintf('test/?appid=%s&market_hash_name=testItem', CsClient::CS_API_IDENTIFIER),
-            $client->getApplicationURLwithItemName('testItem')
+            $client->getApplicationURLWithItemName('testItem')
         );
     }
 }

@@ -8,8 +8,21 @@ use Money\Money;
 
 class Item
 {
-    public function __construct(private Money $lowestPrice, private Money $medianPrice, private int $volume, private string $name)
-    {
+    private Money $lowestPrice;
+    private Money $medianPrice;
+    private int $volume;
+    private string $name;
+
+    public function __construct(
+        Money $lowestPrice,
+        Money $medianPrice,
+        int $volume,
+        string $name
+    ) {
+        $this->lowestPrice = $lowestPrice;
+        $this->medianPrice = $medianPrice;
+        $this->volume = $volume;
+        $this->name = $name;
     }
 
     public function getLowestPrice(): Money
