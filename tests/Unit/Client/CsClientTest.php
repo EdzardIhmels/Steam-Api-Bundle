@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PriceOverviewTests\Unit\Client;
 
-
 use PHPUnit\Framework\TestCase;
 use PriceOverview\Client\CsClient;
 
