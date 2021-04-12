@@ -7,7 +7,7 @@ returns an Item Object based on the ItempriceOverview of Steam
 
 ## Requirements:
 
- * >= PHP 7.4
+ * ``` >= PHP 7.4 ```
 
 ## Install and Usage
  ```
