@@ -4,28 +4,24 @@ declare(strict_types=1);
 
 namespace PriceOverview;
 
-use PriceOverview\ApplicationInterface;
-use PriceOverview\Client\SteamClient;
-use PriceOverview\Model\Item;
 use Money\Currencies\ISOCurrencies;
 use Money\Parser\IntlMoneyParser;
 use NumberFormatter;
+use PriceOverview\Client\SteamClient;
+use PriceOverview\Model\Item;
 use Throwable;
 
 final class ModelItemPriceOverview implements ApplicationInterface
 {
-    private SteamClient $steamClient;
-
-    public function __construct(SteamClient $steamClient)
+    public function __construct(private SteamClient $steamClient)
     {
-        $this->steamClient = $steamClient;
     }
 
     public function execute(string $itemName): ?Item
     {
         try {
             $response = $this->steamClient->itemRequest($itemName);
-        } catch (Throwable $trowable) {
+        } catch (Throwable $throwable) {
             return null;
         }
 
@@ -35,17 +31,19 @@ final class ModelItemPriceOverview implements ApplicationInterface
         $numberFormatter = new NumberFormatter('en_US', NumberFormatter::CURRENCY);
         $moneyParser = new IntlMoneyParser($numberFormatter, $currencies);
 
-        $response = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
+        /** @var array<string, string|int|false> $contents */
+        $contents = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
-        if (false === $response['success']) {
+        if (false === isset($contents['success']) || false === $contents['success']) {
             return null;
         }
-        $response['volume'] = (int)str_replace(',', '', $response['volume']);
+
+        $contents['volume'] = (int)str_replace(',', '', (string)$contents['volume']);
 
         return new Item(
-            $moneyParser->parse($response['lowest_price']),
-            $moneyParser->parse($response['median_price']),
-            $response['volume'],
+            $moneyParser->parse((string)$contents['lowest_price']),
+            $moneyParser->parse((string)$contents['median_price']),
+            $contents['volume'],
             $itemName
         );
     }

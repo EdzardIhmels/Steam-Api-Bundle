@@ -10,15 +10,19 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
-        "guzzlehttp/guzzle": "^7.0",
-        "symfony/http-foundation": "^5.1",
-        "moneyphp/money": "^3.3",
-        "tm/tooly-composer-script": "^1.4"
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "symfony/http-foundation": "^6.0",
+        "moneyphp/money": "^4.1",
+        "ext-intl": "*"
     },
     "require-dev": {
         "slevomat/coding-standard": "^6.4",
-        "mockery/mockery": "^1.4"
+        "mockery/mockery": "^1.4",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^9.5",
+        "ext-http": "*"
     },
     "scripts": {
         "post-install-cmd":
@@ -38,22 +42,10 @@
             "PriceOverviewTests\\": "tests/"
         }
     },
-    "extra": {
-        "tools": {
-            "phpunit": {
-                "url": "https://phar.phpunit.de/phpunit-8.phar",
-                "force-replace": true
-            },
-            "phpcs": {
-                "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar",
-                "sign-url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcs.phar.asc",
-                "force-replace": true
-            },
-            "phpstan": {
-                "url": "https://github.com/phpstan/phpstan/releases/download/0.12.55/phpstan.phar",
-                "sign-url": "https://github.com/phpstan/phpstan/releases/download/0.12.55/phpstan.phar.asc",
-                "force-replace": true
-            }
+    "extra": {},
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
