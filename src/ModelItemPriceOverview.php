@@ -14,18 +14,13 @@ use Throwable;
 
 final class ModelItemPriceOverview implements ApplicationInterface
 {
-    private SteamClient $steamClient;
-
-    public function __construct(SteamClient $steamClient)
-    {
-        $this->steamClient = $steamClient;
-    }
+    public function __construct(private SteamClient $steamClient) {}
 
     public function execute(string $itemName): ?Item
     {
         try {
             $response = $this->steamClient->itemRequest($itemName);
-        } catch (Throwable $trowable) {
+        } catch (Throwable $throwable) {
             return null;
         }
 

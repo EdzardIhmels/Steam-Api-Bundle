@@ -9,22 +9,16 @@ use Psr\Http\Message\ResponseInterface;
 
 class SteamClient extends Client
 {
-    private string $steamURL;
-    private string $appIdentifier;
-
-    public function __construct(string $steamURL, string $appIdentifier)
+    public function __construct(private string $steamURL,private string $appIdentifier)
     {
         parent::__construct([]);
-
-        $this->steamURL = $steamURL;
-        $this->appIdentifier = $appIdentifier;
     }
 
-    public function itemRequest(string $itemname): ResponseInterface
+    public function itemRequest(string $itemName): ResponseInterface
     {
         return $this->request(
             'GET',
-            $this->getApplicationURLWithItemName($itemname),
+            $this->getApplicationURLWithItemName($itemName),
             [
                 'headers' => ['Content-Type' => 'application/json'],
             ]

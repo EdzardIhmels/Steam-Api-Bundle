@@ -10,11 +10,12 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.0",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
         "moneyphp/money": "^3.3",
-        "tm/tooly-composer-script": "^1.4"
+        "tm/tooly-composer-script": "^1.4",
+        "ext-intl": "*"
     },
     "require-dev": {
         "slevomat/coding-standard": "^6.4",
@@ -54,6 +55,11 @@
                 "sign-url": "https://github.com/phpstan/phpstan/releases/download/0.12.55/phpstan.phar.asc",
                 "force-replace": true
             }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }

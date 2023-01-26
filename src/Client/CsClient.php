@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PriceOverview\Client;
 
-class CsClient extends SteamClient
+final class CsClient extends SteamClient
 {
     public const CS_API_IDENTIFIER = '730';
 

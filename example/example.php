@@ -1,7 +1,7 @@
 <?php
 
-use EdzardIhmels\PriceOverview\Client\CsClient;
-use EdzardIhmels\PriceOverview\ModelItemPriceOverview;
+use PriceOverview\Client\CsClient;
+use PriceOverview\ModelItemPriceOverview;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
