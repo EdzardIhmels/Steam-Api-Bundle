@@ -9,7 +9,9 @@ use Psr\Http\Message\ResponseInterface;
 
 class SteamClient
 {
-    public function __construct(private string $steamURL, private string $appIdentifier, private Client $client) {}
+    public function __construct(private string $steamURL, private string $appIdentifier, private Client $client)
+    {
+    }
 
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException

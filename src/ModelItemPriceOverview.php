@@ -13,7 +13,9 @@ use Throwable;
 
 final class ModelItemPriceOverview implements ApplicationInterface
 {
-    public function __construct(private SteamClient $steamClient) {}
+    public function __construct(private SteamClient $steamClient)
+    {
+    }
 
     public function execute(string $itemName): ?Item
     {
