@@ -7,16 +7,16 @@ namespace PriceOverview\Client;
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
 
-class SteamClient extends Client
+class SteamClient
 {
-    public function __construct(private string $steamURL,private string $appIdentifier)
-    {
-        parent::__construct([]);
-    }
+    public function __construct(private string $steamURL, private string $appIdentifier, private Client $client) {}
 
+    /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function itemRequest(string $itemName): ResponseInterface
     {
-        return $this->request(
+        return $this->client->request(
             'GET',
             $this->getApplicationURLWithItemName($itemName),
             [
